@@ -3,6 +3,7 @@ package com.example.androidroom.Room;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
@@ -14,7 +15,7 @@ public interface StudentDao {
     @Insert
     Long insertTask(Student student);
 
-    @Update
+    @Update(onConflict = OnConflictStrategy.REPLACE)
     void updateTask(Student student);
 
     @Delete

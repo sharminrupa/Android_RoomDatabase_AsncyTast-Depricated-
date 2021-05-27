@@ -127,15 +127,17 @@ public class ViewActivity extends AppCompatActivity {
             Log.d("lead data", "Filtered");
             for (Student student: studentArrayList_search){
 
-                if (student.student_name.toLowerCase(Locale.getDefault()).contains(charText)){
+                if (student.student_name.toLowerCase(Locale.getDefault()).contains(charText)
+                  || student.contacatno.toLowerCase(Locale.getDefault()).contains(charText)
+                ){
                     studentArrayList.add(student);
                 }
 
             }
 
-            customAdater.notifyDataSetChanged();
-
         }
+
+        customAdater.notifyDataSetChanged();
     }
 
     //        ******** this is for search end *******

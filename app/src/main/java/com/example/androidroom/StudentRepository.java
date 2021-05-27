@@ -62,4 +62,23 @@ public class StudentRepository {
 
 //    get data task end
 
+
+//    ======================== update task start ====================
+
+    public void updateTask(final Student student){
+
+        new AsyncTask<Void, Void, Void>(){
+
+
+            @Override
+            protected Void doInBackground(Void... voids) {
+                studentDatabase.studentDao().updateTask(student);
+                return null;
+            }
+        }.execute();
+
+    }
+
+//    ======================== update task end ====================
+
 }

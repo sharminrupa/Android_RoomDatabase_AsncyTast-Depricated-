@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".InsertActivity">
+    tools:context=".UpdateActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Give your information"
+        android:text="Update your information"
         android:gravity="center"
-        android:textSize="35sp"
+        android:textSize="32sp"
         android:textStyle="bold"
         android:layout_marginTop="180dp"/>
 
@@ -26,16 +26,21 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/nameText"
-            android:hint="Enter your namne"
-            android:layout_marginTop="50dp"/>
+            android:id="@+id/updateId"
+            android:layout_marginTop="50dp"
+            android:enabled="false"/>
 
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/contactNo"
-            android:hint="Enter your mobile no"/>
+            android:id="@+id/updateName"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/updateContactNo"/>
 
 
         <RadioGroup
@@ -47,7 +52,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/rbtn_male"
+                android:id="@+id/updateRbtn_male"
                 android:text="Male"
                 android:checked="true"/>
 
@@ -55,7 +60,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/rbtn_female"
+                android:id="@+id/updateBtn_female"
                 android:text="Female"
                 android:layout_marginLeft="50dp"
                 android:checked="true"/>
@@ -65,11 +70,10 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/insert"
-            android:text="Insert"
+            android:id="@+id/update"
+            android:text="Update"
             android:textSize="30sp"
             android:layout_marginTop="20dp"/>
-
 
 
     </LinearLayout>
