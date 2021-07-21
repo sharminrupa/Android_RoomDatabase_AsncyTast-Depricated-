@@ -51,6 +51,7 @@ public class CustomAdater extends RecyclerView.Adapter<CustomAdater.MyViewHolder
         ImageView img_gender = holder.img_gender;
         ImageView img_call = holder.img_call;
         Button btn_title = holder.btn_title;
+        ImageView moreBtn = holder.moreBtn;
         LinearLayout ll_card_student = holder.ll_card_student;
 
         tv_reline.setText(dataSet.get(position).rollno+"");
@@ -62,6 +63,7 @@ public class CustomAdater extends RecyclerView.Adapter<CustomAdater.MyViewHolder
         }else if (dataSet.get(position).gender.equalsIgnoreCase("Female")){
             img_gender.setImageResource(R.drawable.female);
         }
+
 
         //======== logic to set title start============
 
@@ -89,13 +91,12 @@ public class CustomAdater extends RecyclerView.Adapter<CustomAdater.MyViewHolder
 
         }else{
             img_call.setVisibility(View.GONE);
+            moreBtn.setVisibility(View.GONE);
         }
 
 
 
         // ================ Random color end =================
-
-
 
 //        ============For update layout listener=================
 
@@ -139,6 +140,7 @@ public class CustomAdater extends RecyclerView.Adapter<CustomAdater.MyViewHolder
         ImageView img_gender;
         ImageView img_call;
         Button btn_title;
+        ImageView moreBtn;
         LinearLayout ll_card_student;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -150,6 +152,7 @@ public class CustomAdater extends RecyclerView.Adapter<CustomAdater.MyViewHolder
             img_gender = itemView.findViewById(R.id.img_gender);
             img_call = itemView.findViewById(R.id.img_call);
             btn_title = itemView.findViewById(R.id.btn_title);
+            moreBtn = itemView.findViewById(R.id.moreBtn);
             ll_card_student = itemView.findViewById(R.id.ll_card_student);
 
         }

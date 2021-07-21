@@ -63,7 +63,6 @@ public class UpdateActivity extends AppCompatActivity {
         }else if (sgender.trim().toLowerCase().equalsIgnoreCase("female")){
             updateRbtn_female.setChecked(true);
         }
-
 //        =================================== Set value ui end=================================
 
 
@@ -87,7 +86,7 @@ public class UpdateActivity extends AppCompatActivity {
                     }
 
                     StudentRepository studentRepository = new StudentRepository(getApplicationContext());
-                    Student student = new Student(st_name_to_update, st_contact_to_update, sgender_to_update);
+                    Student student = new Student(Integer.parseInt(srollno_update), st_name_to_update, st_contact_to_update, sgender_to_update);
                     studentRepository.updateTask(student);
 
                     Toast.makeText(getApplicationContext(), "Values Updated", Toast.LENGTH_SHORT).show();

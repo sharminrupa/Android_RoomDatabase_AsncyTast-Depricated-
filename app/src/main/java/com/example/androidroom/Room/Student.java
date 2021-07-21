@@ -19,10 +19,13 @@ public class Student {
     @ColumnInfo(name = "gender")
     public String gender;
 
-
-    public Student(String student_name , String contacatno , String gender) {
+    public Student(int rollno , String student_name , String contacatno , String gender) {
+        this.rollno = rollno;
         this.student_name = student_name;
         this.contacatno = contacatno;
         this.gender = gender;
     }
+
+
+
 }

@@ -142,4 +142,14 @@ public class ViewActivity extends AppCompatActivity {
 
     //        ******** this is for search end *******
 
+
+//    ========== recycler update data view start =============
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        new LoadDataTask().execute();
+    }
+
+    //    ========== recycler update data view start =============
 }

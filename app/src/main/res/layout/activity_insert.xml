@@ -26,6 +26,13 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/insertId"
+            android:hint="Enter your Id"
+            android:layout_marginTop="50dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/nameText"
             android:hint="Enter your namne"
             android:layout_marginTop="50dp"/>
